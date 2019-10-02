@@ -1,5 +1,21 @@
-@import "~bootstrap/scss/bootstrap";
-
-body {
-    background-color:bisque;
-}
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+#app {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+.quad {
+    display: flex; 
+    flex-basis: calc(50%);  
+    justify-content: center;
+    flex-direction: column;
+  }
+#eat { background-color:#87cded; }
+#play { background-color:#1166FF; }
+#fight { background-color:#00626f; }
+#sleep { background-color: #000080; }
