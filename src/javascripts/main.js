@@ -1,15 +1,15 @@
 import '../styles/main.scss';
 
-import eat from './components/eat';
-import fight from './components/fight';
-import play from './components/play';
-import sleep from './components/sleep';
+import eat from './components/eat/eat';
+import fight from './components/fight/fight';
+import play from './components/play/play';
+// import sleep from './components/sleep/sleep';
 
 const init = () => {
-  fight.yes();
-  play.test();
-  sleep.man();
+  play.printPlay();
+  // sleep.man();
   eat.printEat();
+  fight.printFight();
 };
 
 init();
