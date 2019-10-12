@@ -1,22 +1,19 @@
 import './play.scss';
 import utilities from '../../helpers/utilities';
 
-
 let fun = 50;
 
-const netflix = () => {
-  if (fun > 50) {
-    fun = 50;
-    fun += 50;
-  } else if (fun < 50) {
-    fun = 50;
+const dish = () => {
+  if (fun <= 50) {
+    fun += 2;
+    document.getElementById('playBar').value = fun;
   }
-  document.getElementById('playBar').value = fun;
 };
 
-const crochet = () => {
+const movie = () => {
   if (fun <= 100) {
-    fun += 2;
+    // fun = 100;
+    fun += 50;
     document.getElementById('playBar').value = fun;
   }
 };
@@ -25,16 +22,16 @@ const crochet = () => {
 const printPlay = () => {
   let domString = '';
   domString += `
-  <progress id="play" value="100" min="0" max="100"></progress> 
+  <progress id="playBar" value="50" min="0" max="100"></progress> 
   <h3>Play</h3>
   <div>
-  <button id="chill">Netflix & Chill</button>
-  <button id="crochet">Crochet</button>
+  <button id="dish">Dishes</button>
+  <button id="movie">Movies</button>
   </div>
   `;
   utilities.printToDom('play', domString);
-  document.getElementById('crochet').addEventListener('click', crochet);
-  document.getElementById('chill').addEventListener('click', netflix);
+  document.getElementById('movie').addEventListener('click', movie);
+  document.getElementById('dish').addEventListener('click', dish);
 };
 
 export default { printPlay };
