@@ -21,11 +21,13 @@ const deep = () => {
 const printSleep = () => {
   let domString = '';
   domString += `
-  <progress id="sleepBar" value="50" min="0" max="100"></progress> 
-  <h3>Play</h3>
+  <div>
+  <progress id="sleepBar" value="50" min="0" max="100" style="background-color:green""></progress> 
+  <h3>Sleep</h3>
   <div>
   <button id="nap">Nap</button>
   <button id="deep">Deep Slumber</button>
+  </div>
   </div>
   `;
   utilities.printToDom('sleep', domString);
