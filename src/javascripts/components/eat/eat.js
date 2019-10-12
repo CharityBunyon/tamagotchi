@@ -21,11 +21,13 @@ const pizza = () => {
 const printEat = () => {
   let domString = '';
   domString += `
-  <progress id="bar" value="100" min="0" max="100"></progress> 
+  <div>
+  <progress id="bar" value="100" min="0" max="100" style="background-color:green"></progress> 
   <h3>Eat</h3>
   <div>
   <button id="bad">Pizza</button>
   <button id="good">Salad</button>
+  </div>
   </div>
   `;
   utilities.printToDom('eat', domString);

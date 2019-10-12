@@ -22,11 +22,13 @@ const movie = () => {
 const printPlay = () => {
   let domString = '';
   domString += `
-  <progress id="playBar" value="50" min="0" max="100"></progress> 
+  <div>
+  <progress id="playBar" value="50" min="0" max="100" style="background-color:green"></progress> 
   <h3>Play</h3>
   <div>
   <button id="dish">Dishes</button>
   <button id="movie">Movies</button>
+  </div>
   </div>
   `;
   utilities.printToDom('play', domString);

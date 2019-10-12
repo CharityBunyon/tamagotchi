@@ -25,11 +25,13 @@ const violence = () => {
 const printFight = () => {
   let domString = '';
   domString += `
-  <progress id="fightBar" value="100" min="0" max="100"></progress> 
+  <div>
+  <progress id="fightBar" value="100" min="0" max="100" style="background-color:green"></progress> 
   <h3>Fight</h3>
   <div>
   <button id="brave">Run Away</button>
   <button id="violence">Karate Chop</button>
+  </div>
   </div>
   `;
   utilities.printToDom('fight', domString);
